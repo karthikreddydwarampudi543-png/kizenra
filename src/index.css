@@ -1,0 +1,565 @@
+/* =========================================================
+   TAILWIND
+========================================================= */
+
+@import "tailwindcss";
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #050505;
+  color: white;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* =========================================================
+   GLOBAL LIGHT MODE
+========================================================= */
+
+html.light body {
+  background: #f5f5f7;
+  color: #111827;
+}
+
+/* =========================================================
+   LIGHT MODE - GENERAL SURFACES
+========================================================= */
+
+html.light .bg-\[\#090909\] {
+  background-color: #ffffff !important;
+}
+
+html.light .bg-\[\#080808\] {
+  background-color: #ffffff !important;
+}
+
+html.light .bg-\[\#111111\] {
+  background-color: #ffffff !important;
+}
+
+html.light .bg-white\/\[0\.02\] {
+  background-color: #f3f4f6 !important;
+}
+
+html.light .bg-white\/\[0\.025\] {
+  background-color: #f3f4f6 !important;
+}
+
+html.light .bg-white\/\[0\.03\] {
+  background-color: #f3f4f6 !important;
+}
+
+html.light .bg-white\/\[0\.035\] {
+  background-color: #f3f4f6 !important;
+}
+
+/* =========================================================
+   LIGHT MODE - BORDERS
+========================================================= */
+
+html.light .border-white\/10 {
+  border-color: #e5e7eb !important;
+}
+
+html.light .border-white\/5 {
+  border-color: #e5e7eb !important;
+}
+
+html.light .border-white\/\[0\.06\] {
+  border-color: #e5e7eb !important;
+}
+
+html.light .border-white\/\[0\.045\] {
+  border-color: #e5e7eb !important;
+}
+
+/* =========================================================
+   LIGHT MODE - TEXT
+========================================================= */
+
+html.light .text-gray-200 {
+  color: #1f2937 !important;
+}
+
+html.light .text-gray-300 {
+  color: #374151 !important;
+}
+
+html.light .text-gray-400 {
+  color: #4b5563 !important;
+}
+
+html.light .text-gray-500 {
+  color: #6b7280 !important;
+}
+
+html.light .text-gray-600 {
+  color: #6b7280 !important;
+}
+
+html.light .text-gray-700 {
+  color: #374151 !important;
+}
+
+/* =========================================================
+   LIGHT MODE - INPUTS
+========================================================= */
+
+html.light input,
+html.light textarea {
+  color: #111827 !important;
+  caret-color: #7c3aed !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #9ca3af !important;
+}
+
+html.light input[placeholder="Search your content..."] {
+  background-color: transparent !important;
+  color: #111827 !important;
+}
+
+html.light input[placeholder="Ask Sara anything..."] {
+  background-color: transparent !important;
+  color: #111827 !important;
+}
+
+/* =========================================================
+   LIGHT MODE - HOVER BACKGROUNDS
+========================================================= */
+
+/*
+   These replace dark-mode hover backgrounds with
+   light gray surfaces.
+*/
+
+html.light .hover\:bg-white\/5:hover {
+  background-color: #f3f4f6 !important;
+}
+
+html.light .hover\:bg-white\/10:hover {
+  background-color: #e5e7eb !important;
+}
+
+html.light .hover\:bg-white\/\[0\.03\]:hover {
+  background-color: #f3f4f6 !important;
+}
+
+html.light .hover\:bg-white\/\[0\.035\]:hover {
+  background-color: #f3f4f6 !important;
+}
+
+html.light .hover\:bg-white\/\[0\.04\]:hover {
+  background-color: #f3f4f6 !important;
+}
+
+html.light .hover\:bg-white\/\[0\.06\]:hover {
+  background-color: #e5e7eb !important;
+}
+
+/* =========================================================
+   LIGHT MODE - HOVER TEXT
+========================================================= */
+
+/*
+   Dark mode often uses hover:text-white.
+   In light mode, keep the text dark.
+*/
+
+html.light .hover\:text-white:hover {
+  color: #374151 !important;
+}
+
+html.light .hover\:text-purple-200:hover {
+  color: #7c3aed !important;
+}
+
+html.light .hover\:text-purple-300:hover {
+  color: #7c3aed !important;
+}
+
+/* =========================================================
+   LIGHT MODE - HEADER
+========================================================= */
+
+html.light header {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: #e5e7eb !important;
+}
+
+html.light header input {
+  color: #111827 !important;
+}
+
+html.light header input::placeholder {
+  color: #9ca3af !important;
+}
+
+html.light header .bg-white\/\[0\.025\] {
+  background-color: #f3f4f6 !important;
+}
+
+html.light header .bg-white\/5 {
+  background-color: #f3f4f6 !important;
+}
+
+html.light header .bg-\[\#111111\] {
+  background-color: #ffffff !important;
+}
+
+/*
+   Header controls should never become black on hover.
+*/
+
+html.light header .hover\:bg-white\/5:hover {
+  background-color: #e5e7eb !important;
+}
+
+html.light header .hover\:bg-white\/10:hover {
+  background-color: #e5e7eb !important;
+}
+
+html.light header .hover\:bg-white\/\[0\.04\]:hover {
+  background-color: #f3f4f6 !important;
+}
+
+html.light header .hover\:text-white:hover {
+  color: #374151 !important;
+}
+
+html.light header .text-white {
+  color: #111827 !important;
+}
+
+/* Keep platform colors */
+html.light header .text-red-400 {
+  color: #f87171 !important;
+}
+
+html.light header .text-pink-400 {
+  color: #f472b6 !important;
+}
+
+html.light header .text-blue-400 {
+  color: #60a5fa !important;
+}
+
+/* =========================================================
+   LIGHT MODE - SIDEBAR
+========================================================= */
+
+html.light aside {
+  background-color: #ffffff !important;
+  border-color: #e5e7eb !important;
+}
+
+html.light aside .bg-\[\#080808\] {
+  background-color: #ffffff !important;
+}
+
+html.light aside .hover\:bg-white\/\[0\.04\]:hover {
+  background-color: #f3f4f6 !important;
+}
+
+html.light aside .hover\:text-white:hover {
+  color: #374151 !important;
+}
+
+html.light aside .text-white {
+  color: #111827 !important;
+}
+
+/* =========================================================
+   LIGHT MODE - DARK BUTTONS
+========================================================= */
+
+html.light .bg-gray-900 {
+  color: #ffffff !important;
+}
+
+html.light .bg-gray-900:hover {
+  color: #ffffff !important;
+}
+
+html.light .bg-purple-600 {
+  color: #ffffff !important;
+}
+
+/* =========================================================
+   LIGHT MODE - BUTTON TRANSITIONS
+========================================================= */
+
+html.light button {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* =========================================================
+   CREATORS' HEART
+========================================================= */
+
+@keyframes heartPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    filter:
+      drop-shadow(0 0 8px rgba(168, 85, 247, 0.4))
+      drop-shadow(0 0 20px rgba(168, 85, 247, 0.2));
+  }
+
+  25% {
+    transform: scale(1.08);
+    filter:
+      drop-shadow(0 0 18px rgba(168, 85, 247, 0.9))
+      drop-shadow(0 0 45px rgba(168, 85, 247, 0.65))
+      drop-shadow(0 0 80px rgba(236, 72, 153, 0.35));
+  }
+
+  40% {
+    transform: scale(1);
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes glowPulseSlow {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 0.55;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes heartBreath {
+  0%,
+  100% {
+    transform: scale(0.96);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes dotPulse {
+  0%,
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbitReverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes particleOne {
+  0%,
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.25;
+  }
+
+  50% {
+    transform: translate(-15px, -25px);
+    opacity: 1;
+  }
+}
+
+@keyframes particleTwo {
+  0%,
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.25;
+  }
+
+  50% {
+    transform: translate(20px, -20px);
+    opacity: 1;
+  }
+}
+
+@keyframes particleThree {
+  0%,
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.25;
+  }
+
+  50% {
+    transform: translate(20px, 15px);
+    opacity: 1;
+  }
+}
+
+.creator-heart {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(168, 85, 247, 0.18),
+    rgba(126, 34, 206, 0.08) 45%,
+    transparent 72%
+  );
+  animation: heartBreath 2.8s ease-in-out infinite;
+}
+
+.heart-symbol {
+  font-size: 145px;
+  line-height: 1;
+  color: #a855f7;
+  text-shadow:
+    0 0 8px rgba(168, 85, 247, 0.9),
+    0 0 20px rgba(168, 85, 247, 0.8),
+    0 0 45px rgba(168, 85, 247, 0.7),
+    0 0 90px rgba(168, 85, 247, 0.5);
+  animation: heartPulse 1.8s ease-in-out infinite;
+}
+
+.creator-heart-glow {
+  animation: glowPulse 2.8s ease-in-out infinite;
+}
+
+.creator-heart-glow-slow {
+  animation: glowPulseSlow 4s ease-in-out infinite;
+}
+
+.heart-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #a855f7;
+  box-shadow:
+    0 0 8px #a855f7,
+    0 0 18px rgba(168, 85, 247, 0.8);
+  animation: dotPulse 1.8s ease-in-out infinite;
+}
+
+.heart-orbit {
+  animation: orbit 12s linear infinite;
+}
+
+.heart-orbit-reverse {
+  animation: orbitReverse 16s linear infinite;
+}
+
+.heart-particle {
+  position: absolute;
+  z-index: 5;
+  color: #c084fc;
+  font-size: 18px;
+  opacity: 0.4;
+  text-shadow: 0 0 15px rgba(168, 85, 247, 0.9);
+}
+
+.particle-one {
+  left: 35px;
+  top: 90px;
+  animation: particleOne 4s ease-in-out infinite;
+}
+
+.particle-two {
+  right: 50px;
+  top: 55px;
+  animation: particleTwo 5s ease-in-out infinite;
+}
+
+.particle-three {
+  right: 35px;
+  bottom: 100px;
+  animation: particleThree 4.5s ease-in-out infinite;
+}
+
+.particle-four {
+  left: 70px;
+  bottom: 70px;
+  animation: particleTwo 5.5s ease-in-out infinite reverse;
+}
+
+.particle-five {
+  left: 50%;
+  top: 15px;
+  animation: particleOne 4s ease-in-out infinite;
+}
+/* Hide scrollbar while keeping scrolling enabled */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+/* =========================================================
+   MOBILE HEART
+========================================================= */
+
+@media (max-width: 640px) {
+  .creator-heart {
+    width: 130px;
+    height: 130px;
+  }
+
+  .heart-symbol {
+    font-size: 110px;
+  }
+}
